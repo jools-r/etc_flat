@@ -17,10 +17,10 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '0.1.2';
-$plugin['author'] = 'Oleg Loukianov';
+$plugin['version'] = '0.1.3';
+$plugin['author'] = 'Oleg Loukianov + jcr';
 $plugin['author_uri'] = 'http://www.iut-fbleau.fr/projet/etc/';
-$plugin['description'] = 'Work with flat file theme templates in debugging mode';
+$plugin['description'] = 'Work with flat file theme templates in debugging mode (Laravel Valet version)';
 
 // Plugin load order:
 // The default value of 5 would fit most plugins, while for instance comment
@@ -74,7 +74,9 @@ if (0) {
 ?>
 # --- BEGIN PLUGIN HELP ---
 
-h1. etc_flat
+h1. etc_flat (Laravel Valet version)
+
+*Use this version when developing with "Laravel Valet":https://laravel.com/docs/valet.*
 
 Work with flat file theme template files in Textpattern in debugging mode. Develop themes using the code editor of your choice.
 
@@ -96,7 +98,7 @@ If you visit _Presentation › Pages_ or _Presentation › Forms_, you will see 
 
 *Note: you must be logged in to see the changes.* Public visitors who are not logged in will see the theme using the pages and forms in the database.
 
-h3. Deactivating 
+h3. Deactivating
 
 Simply switch the *Production status back to *Live* in _Admin › Preferences › Site_, and Textpattern will revert to using the pages and forms in the Textpattern database.
 
@@ -121,7 +123,8 @@ If you would rather not update all the database theme files (e.g. because they a
 
 h2. Changelog
 
-- v0.1.2 – initial version by Oleg Loukianov, as posted on the "Textpattern forum":https://forum.textpattern.com/viewtopic.php?pid=310108#p310108.
+* v0.1.3 – modified paths when working with "Laravel Valet":https://laravel.com/docs/valet und a parked @~/Sites@ folder. (Changes / jcr)
+* v0.1.2 – initial version by Oleg Loukianov, as posted on the "Textpattern forum":https://forum.textpattern.com/viewtopic.php?pid=310108#p310108.
 
 
 # --- END PLUGIN HELP ---
@@ -150,11 +153,16 @@ function etc_flat($event, $step, $rs) {
     $page = false;
 
     if ($event == 'page.fetch') {
-        $page = @file_get_contents(get_pref('skin_dir', 'themes').DS.$theme.DS.'pages'.DS.$name.'.txp')
+        $page_path = get_pref('path_to_site').DS.get_pref('skin_dir', 'themes').DS.$theme.DS.'pages'.DS.$name.'.txp';
+        $page = file_get_contents($page_path)
         or $page = safe_field('user_html', 'txp_page', "name = '".doSlash($name)."' AND skin = '".doSlash($theme)."'");
+
     } else {
-        foreach (glob(get_pref('skin_dir', 'themes').DS.$skin.DS.'forms'.DS.'*', GLOB_ONLYDIR) as $dir) {
-            if ($page = @file_get_contents($dir.DS.$name.'.txp')) break;
+        foreach (glob(get_pref('path_to_site').DS.get_pref('skin_dir', 'themes').DS.$skin.DS.'forms'.DS.'*', GLOB_ONLYDIR) as $dir) {
+            if(file_exists($dir.DS.$name.'.txp')) {
+                $page = file_get_contents($dir.DS.$name.'.txp');
+                break;
+            }
         }
 
         $page or $page = safe_field('Form', 'txp_form', "name = '".doSlash($name)."' AND skin = '".doSlash($skin)."'");

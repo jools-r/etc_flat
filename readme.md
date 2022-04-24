@@ -1,4 +1,6 @@
-# etc_flat
+# etc_flat (Laravel Valet version)
+
+**Use this version when developing with [Laravel Valet](https://laravel.com/docs/valet)**.
 
 Work with flat file theme template files in Textpattern in debugging mode. Develop themes using the code editor of your choice.
 
@@ -50,6 +52,7 @@ If you would rather not update all the database theme files (e.g. because they a
 
 ## Changelog
 
+- v0.1.3 – modified paths when working with [Laravel Valet](https://laravel.com/docs/valet) und a parked `~/Sites` folder. (Changes / jcr)
 - v0.1.2 – initial version by Oleg Loukianov, as posted on the [Textpattern forum](https://forum.textpattern.com/viewtopic.php?pid=310108#p310108).
 
 
