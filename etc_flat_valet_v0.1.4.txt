@@ -1,0 +1,53 @@
+# etc_flat_valet v0.1.4
+# Work with flat file theme templates in debugging mode (Laravel Valet version)
+# Oleg Loukianov + jcr
+# http://www.iut-fbleau.fr/projet/etc/
+
+# ......................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# ......................................................................
+
+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%
