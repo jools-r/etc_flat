@@ -1,0 +1,46 @@
+# Name: etc_flat v0.1.3
+# Type: Admin/Public/AJAX plugin
+# Description: Work with flat file theme templates in debugging mode
+# Author: Oleg Loukianov
+# URL: http://www.iut-fbleau.fr/projet/etc/
+# Recommended load order: 5
+
+# .....................................................................
+# This is a plugin for Textpattern CMS - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# .....................................................................
+
+YToxMTp7czo0OiJuYW1lIjtzOjg6ImV0Y19mbGF0IjtzOjY6ImF1dGhvciI7czowOiIiO3M6
+MTA6ImF1dGhvcl91cmkiO3M6MDoiIjtzOjc6InZlcnNpb24iO3M6NToiMC4xLjMiO3M6MTE6
+ImRlc2NyaXB0aW9uIjtzOjA6IiI7czo0OiJjb2RlIjtzOjE0OTY6Imdsb2JhbCAkZXZlbnQs
+ICRwcm9kdWN0aW9uX3N0YXR1czsNCg0KaWYgKCRwcm9kdWN0aW9uX3N0YXR1cyA9PT0gJ2Rl
+YnVnJyB8fCAkcHJvZHVjdGlvbl9zdGF0dXMgIT09ICdsaXZlJyAmJiBpc19sb2dnZWRfaW4o
+KSkgew0KICAgIHJlZ2lzdGVyX2NhbGxiYWNrKCdldGNfZmxhdCcsICdwYWdlLmZldGNoJyk7
+DQogICAgcmVnaXN0ZXJfY2FsbGJhY2soJ2V0Y19mbGF0JywgJ2Zvcm0uZmV0Y2gnKTsNCg0K
+ICAgIGlmICh0eHBpbnRlcmZhY2UgPT0gJ2FkbWluJyAmJiBpbl9hcnJheSgkZXZlbnQsIGFy
+cmF5KCdwYWdlJywgJ2Zvcm0nKSkpIHsNCiAgICAgICAgcmVnaXN0ZXJfY2FsbGJhY2soZnVu
+Y3Rpb24oJGV2ZW50KXsNCiAgICAgICAgICAgIGdsb2JhbCAkZXZlbnQ7DQogICAgICAgICAg
+ICBlY2hvIGFubm91bmNlKGFycmF5KCdTZXJ2aW5nICcuZ1R4dCgkZXZlbnQuJ3MnKS4nIG9m
+ICcuZ2V0X3ByZWYoJ3NraW5fZWRpdGluZycsICdkZWZhdWx0JykuJyB0aGVtZSBmcm9tIGRp
+c2snLCBFX1dBUk5JTkcpKTsNCiAgICAgICAgfSwgJ2FkbWluX3NpZGUnLCAnYm9keV9lbmQn
+KTsNCiAgICB9DQp9DQoNCmZ1bmN0aW9uIGV0Y19mbGF0KCRldmVudCwgJHN0ZXAsICRycykg
+ew0KICAgIGV4dHJhY3QoJHJzKTsNCiAgICAkcGFnZSA9IGZhbHNlOw0KICAgICRza2luX2Rp
+ciA9IGdldF9wcmVmKCdza2luX2RpcicsICd0aGVtZXMnKTsNCiAgICAkc3luYyA9IGdldF9w
+cmVmKCdza2luX2RlbGV0ZV9mcm9tX2RhdGFiYXNlJyk7DQoNCiAgICBpZiAoJGV2ZW50ID09
+ICdwYWdlLmZldGNoJykgew0KICAgICAgICBpc19yZWFkYWJsZSgkc2tpbl9kaXIuRFMuJHRo
+ZW1lLkRTLidwYWdlcycuRFMuJG5hbWUuJy50eHAnKSBhbmQgJHBhZ2UgPSBmaWxlX2dldF9j
+b250ZW50cygkc2tpbl9kaXIuRFMuJHRoZW1lLkRTLidwYWdlcycuRFMuJG5hbWUuJy50eHAn
+KQ0KICAgICAgICBvciAhJHN5bmMgYW5kICRwYWdlID0gc2FmZV9maWVsZCgndXNlcl9odG1s
+JywgJ3R4cF9wYWdlJywgIm5hbWUgPSAnIi5kb1NsYXNoKCRuYW1lKS4iJyBBTkQgc2tpbiA9
+ICciLmRvU2xhc2goJHRoZW1lKS4iJyIpOw0KICAgIH0gZWxzZSB7DQogICAgICAgIGVtcHR5
+KCR0aGVtZSkgb3IgJHNraW4gPSAkdGhlbWU7DQoNCiAgICAgICAgZm9yZWFjaCAoZ2xvYigk
+c2tpbl9kaXIuRFMuJHNraW4uRFMuJ2Zvcm1zJy5EUy4nKicsIEdMT0JfT05MWURJUikgYXMg
+JGRpcikgew0KICAgICAgICAgICAgaWYgKGlzX3JlYWRhYmxlKCRkaXIuRFMuJG5hbWUuJy50
+eHAnKSBhbmQgJHBhZ2UgPSBmaWxlX2dldF9jb250ZW50cygkZGlyLkRTLiRuYW1lLicudHhw
+JykpIGJyZWFrOw0KICAgICAgICB9DQoNCiAgICAgICAgJHBhZ2Ugb3IgISRzeW5jIGFuZCAk
+cGFnZSA9IHNhZmVfZmllbGQoJ0Zvcm0nLCAndHhwX2Zvcm0nLCAibmFtZSA9ICciLmRvU2xh
+c2goJG5hbWUpLiInIEFORCBza2luID0gJyIuZG9TbGFzaCgkc2tpbikuIiciKTsNCiAgICB9
+DQoNCiAgICByZXR1cm4gJHBhZ2U7DQp9IjtzOjQ6InR5cGUiO3M6MToiNSI7czo1OiJvcmRl
+ciI7czoxOiI1IjtzOjU6ImZsYWdzIjtzOjE6IjAiO3M6NDoiaGVscCI7czowOiIiO3M6Mzoi
+bWQ1IjtzOjMyOiJkNmMyY2FlZTZmYmY2NDRjNmM2YWYzMmE5Njk0OTc4ZCI7fQ==
